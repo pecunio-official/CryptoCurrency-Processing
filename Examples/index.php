@@ -64,7 +64,7 @@
 	$options = array(
 			"public_key"  => $public_key, 	// your public key from ctrlholdings.com
 			"private_key" => $private_key, 	// your private key from ctrlholdings.com
-			"webdev_key"  => "", 		// optional, gourl affiliate key
+			"webdev_key"  => "", 			// optional,  affiliate key
 			"orderID"     => $orderID, 		// order id
 			"userID"      => $userID, 		// unique identifier for every user
 			"userFormat"  => $userFormat, 	// save userID in COOKIE, IPADDRESS or SESSION
@@ -108,7 +108,7 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
    "http://www.w3.org/TR/html4/loose.dtd">
 <html><head>
-<title>Pay-Per-View / Page Access Cryptocoin (payments in multiple cryptocurrencies) Payment Example</title>
+<title>Payment Example</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <meta http-equiv='cache-control' content='no-cache'>
 <meta http-equiv='Expires' content='-1'>
@@ -117,13 +117,12 @@
 </head>
 <body style='font-family:Arial,Helvetica,sans-serif;font-size:14px;color:#666;margin:0'>
 <div align='center'>
-<div style='width:100%;height:auto;line-height:50px;background-color:#f1f1f1;border-bottom:1px solid #ddd;color:#49abe9;font-size:18px;'>
-	10. GoUrl <b>Pay-Per-View/Page</b> Example (multiple cryptocurrencies). Use it on your website. 
-	<div style='float:right;'><a style='font-size:15px;color:#389ad8;margin-right:20px' href='<?= "//".$_SERVER["HTTP_HOST"].str_replace("-multi.php", ".php", $_SERVER["REQUEST_URI"]); ?>'>Single Crypto</a><a style='font-size:15px;color:#389ad8;margin-right:20px' href='https://ctrlholdings.com/<?= strtolower($coinName) ?>-payment-gateway-api.html#p5'>PHP Source</a><a style='font-size:15px;color:#389ad8;margin-right:20px' href='https://github.com/cryptoapi/Bitcoin-Payment-Gateway-ASP.NET/tree/master/GoUrl/Views/Examples/PayPerPageMulti.cshtml'>ASP.NET Source</a><a style='font-size:15px;color:#389ad8;margin-right:20px' href='https://wordpress.org/plugins/gourl-bitcoin-payment-gateway-paid-downloads-membership/'>Wordpress</a><a style='font-size:15px;color:#389ad8;margin-right:20px' href='https://ctrlholdings.com/<?= strtolower($coinName) ?>-payment-gateway-api.html'>Other Examples</a></div>
+<div style='width:100%;height:auto;line-height:50px;background-color:#f1f1f1;border-bottom:1px solid #ddd;color:#49abe9;font-size:18px;'> 
+	<div style='float:right;'><a style='font-size:15px;color:#389ad8;margin-right:20px' href='<?= "//".$_SERVER["HTTP_HOST"].str_replace("-multi.php", ".php", $_SERVER["REQUEST_URI"]); ?>'>Single Crypto</a><a style='font-size:15px;color:#389ad8;margin-right:20px' href='https://ctrlholdings.com/<?= strtolower($coinName) ?>-payment-gateway-api.html#p5'>PHP Source</a><a style='font-size:15px;color:#389ad8;margin-right:20px' href='https://github.com/cryptoapi/Bitcoin-Payment-Gateway-ASP.NET/tree/master//Views/Examples/PayPerPageMulti.cshtml'>ASP.NET Source</a><a style='font-size:15px;color:#389ad8;margin-right:20px' href='https://wordpress.org/plugins/-bitcoin-payment-gateway-paid-downloads-membership/'>Wordpress</a><a style='font-size:15px;color:#389ad8;margin-right:20px' href='https://ctrlholdings.com/<?= strtolower($coinName) ?>-payment-gateway-api.html'>Other Examples</a></div>
 </div>
 <br>
-<h1>Example - Pay Per View - Video/Page Access for Unregistered Visitors (multi coins below)</h1>
-<h3>Your Website Visitors have to pay for access to your premium video/webpage(s)</h3>
+<h1>Example Payments</h1>
+
 <br>
 Price: ~<?php echo $amountUSD; ?> US$ for <?php echo $period; ?> access 
 <br><br>
@@ -134,14 +133,14 @@ Price: ~<?php echo $amountUSD; ?> US$ for <?php echo $period; ?> access
 	<!-- You can use the same payment gateway code for few your pages (section1) -->	 
 	<!-- Your Premium Page(s) Code  -->
 	 
-	<h2 style='color:#339e2e;'>Cryptocoin Payment received<br>Successful Access to Premium Page (during <?php echo $period; ?>)</h2>
+	<h2 style='color:#339e2e;'><?php echo $period; ?></h2>
 	<img alt='Pay Per View Access' border='0' src='https://ctrlholdings.com/images/example9_2.jpg'>
 	
 	
 <?php else: ?>
 
 	 <!-- Awaiting Payment -->
-	<a href='#gourlcryptocoins'><img alt='Awaiting Payment - Pay Per View' border='0' src='https://ctrlholdings.com/images/example9.jpg'></a>
+	<a href='#cryptocoins'><img alt='' border='0' src='https://ctrlholdings.com/images/example9.jpg'></a>
 	<br><br><br><br>
 	<?php echo $coins_list;  ?>
 	<div style='font-size:12px;margin:30px 0 5px 370px'>Language: &#160; <?php echo $languages_list; ?></div>
